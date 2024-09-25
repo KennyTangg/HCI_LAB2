@@ -1,0 +1,164 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Assignment Week 3</title>
+</head>
+<style>
+    body {
+        background-image: url(Solaria.jpg); /* Image from image file  */
+        background-size: cover; /* Cover the entire area */
+        background-repeat: no-repeat; /* Prevent the image from repeating*/
+        background-position: center; /* Center the image */
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<body>
+    <header>
+        <h1 style="border-bottom:2px solid black;">     Reservation Form</h1> <!--Title with the biggest heading-->
+    </header>
+
+    <main style="margin: 0.1em; padding: 1em;">
+        <br>
+        <!-- Start of the form using <form>, and using <div> to seperate to make it look more clean-->
+        <form action="action_page.php" method="GET"> 
+            <div>
+                <!--label and input to get the user's first name,<lable> to give a name and <input> to let the user input-->
+                <label for="fname">First Name : </label>
+                <input type="text" name="fname" id="fname" placeholder="first name" style="margin-right:8px;" required>
+                <!--label and input to get the user's last name,<lable> to give a name and <input> to let the user input-->
+                <label for="lname">Last Name : </label>
+                <input type="text" name="lname" id="lname" placeholder="last name" required>
+            </div>
+            <br>
+            <div>
+                <!--label and input to get the user's email address,<lable> to give a name and <input> to let the user input-->
+                <label for="email">Email Account : </label>
+                <input type="email" name="email" id="email" placeholder="your.email@gmail.com" style="margin-top:8px;margin-bottom:4px;" required>
+            </div>
+            <br>
+            <div>
+                <!--label and input to get the user's reservation date,<lable> to give a name and <input> to let the user input-->
+                <label for="date">Reservation Date : </label>
+                <input type="date" name="date" id="date" style="margin-top:8px;margin-bottom:4px;" required>
+            </div>
+            <br>
+            <div>
+                <!--label and input to get the user's phone number,<lable> to give a name and <input> to let the user input-->
+                <label for="phone">Phone Number : </label>
+                <input type="tel" name="phone" id="phone" placeholder="012-3456-789" style="margin-top:8px;margin-bottom:4px;" required>
+            </div>
+            <br>
+            <div>
+                <!--label and input to get the number of guests,<lable> to give a name and <input> to let the user input-->
+                <label for="Guests">Number of Guests : </label>
+                <input type="number" name="Guests" id="Guests" style="margin-top:8px;margin-bottom:4px;" min = "1" max = "99" required>
+            </div>
+            <br>
+            <div>
+                <!--label and dropdown selection for user to choose the payment method,<lable> to give a name and <select> to let the user select from the option-->
+                <label for="payment">Payment Method : </label>
+                <select id="payment" name="payment">
+                    <option value="visa"> Visa </option>
+                    <option value="mastercard"> MasterCard </option>
+                    <option value="go-pay"> Go-pay </option>
+                    <option value="ovo"> OVO </option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <!--label and radio selection to get the user's seating preference,<lable> to give a name and <input> to let the user input in this case by clicking the radio-->
+                <label for="title">Seating Preference : </label>
+                <input type="radio" name="title" id="indoor" value="indoor" style="margin-top:8px;margin-bottom:4px;" required>
+                <label for="indoor"> Indoor </label>
+                <input type="radio" name="title" id="outdoor" value="outdoor" style="margin-top:8px;margin-bottom:4px;" required>
+                <label for="outdoor"> Outdoor </label>
+            </div>
+            <br>
+            <div>
+                <!--reset button to reset/clear the form-->
+                <input type="reset">
+            </div>
+            <br>
+            <div>
+                <!--submit button to submit the form-->
+                <input type="submit">
+            </div>
+        </form>
+        <br>
+        <!--start of the menu table,<table> to make a table, <tr> use for table row, <th> to make a cell in a table and bold the words, <td> to make a cell in a table -->
+        <table bgcolor="black" width="1250">
+            <!-- Changing the background color and fonts using css-->
+            <tr style="background-color:rgb(184, 1, 184);font-family:Arial;">
+                <!--Header/Title for the menu table, colspan="6" to take 6 column at once -->
+                <th colspan="9" style="color:white;">Menus</th>
+            </tr>
+            <tr style="background-color:rgb(237, 8, 237);font-family:Arial;">
+                <!--Headers for different menu categories-->
+                <th style="text-align:center;color:white;">Menu Special</th>
+                <th colspan="2" style="text-align:center;color:white;">Menu Nasi Goreng</th>
+                <th colspan="2" style="text-align:center;color:white;">Menu Express Bowl</th>
+                <th colspan="2" style="text-align:center;color:white;">Menu Bihun, Kwetiau, dan Mie</th>
+                <th style="text-align:center;color:white;">Menu Paket</th>
+                <th style="text-align:center;color:white;">Minuman</th>
+            </tr>
+            <!--rows of different menus-->
+            <tr bgcolor="white" style="text-align: center;">
+                <td>Spaghetti Bolognese : Rp23.000</td>
+                <td rowspan="6" width="100"> Nasi Goreng </td>
+                <td>Special: Rp37.000</td> 
+                <td rowspan="6" width="100">Express Bowl</td>
+                <td>Ayam Geprek: Rp23.000</td>
+                <td rowspan="2" width="100">Bihun</td>
+                <td>Ayam: Rp24.000</td>
+                <td>Nasi Cap Cay: Rp40.000</td>
+                <td>Teh Tarik: Rp18.000</td>
+            </tr>
+            <tr bgcolor="white" style="text-align: center;">
+                <td>Nasi + Ayam Crispy Black Pepper Sauce: Rp29.000</td>
+                <td>Modern: Rp41.000</td>
+                <td>Ayam Teriyaki: Rp23.000</td>
+                <td>Ayam Pangsit Rebus Bakso: Rp33.000</td>
+                <td>Nasi Fu Yung Hai: Rp40.000</td>
+                <td>Es Teh Manis: Rp7.000</td>
+            </tr>
+            <tr bgcolor="white" style="text-align: center;">
+                <td>Nasi + Chicken Bulgogi : Rp35.000</td> 
+                <td>Sosis: Rp41.000</td>
+                <td>Ikan Rica: Rp27.000</td>
+                <td rowspan="2" style="text-align: center;">Kwetiau</td>
+                <td>Goreng Ayam: Rp40.000</td>
+                <td>Nasi Ayam Cah Jamur: Rp40.000</td>
+                <td>Es Lemon Tea: Rp13.000</td>
+            </tr>
+            <tr bgcolor="white" style="text-align: center;">
+                <td>Chicken Steak Chessy + Kentang: Rp48.000</td>
+                <td>Seafood : Rp43.000</td>
+                <td>Ikan Mayo: Rp27.000</td>
+                <td>Seafood Siram: Rp45.000</td>
+                <td>Nasi + Udang Goreng Tepung: Rp40.000</td>
+                <td>Milo: Rp13.000</td>
+            </tr>
+            <tr bgcolor="white" style="text-align: center;">
+                <td>Chicken Cordon Bleu + Nasi: Rp48.000</td>
+                <td>Kepiting Rajungan   : Rp45.000</td>
+                <td>Mix Mentega: Rp30.000</td>
+                <td rowspan="2">Mie</td>
+                <td>Ayam Solaria Spesial(Pedas): Rp27.000</td>
+                <td>Nasi + Ayam Goreng Tepung: Rp42.000</td>
+                <td>Teh Botol: Rp7.000</td>
+            </tr>
+            <tr bgcolor="white" style="text-align: center;">
+                <td>Fish & Chips + Kentang: Rp54.000</td>
+                <td>Tom Yum Ayam: Rp37.000</td>
+                <td>Mix Asam Manis: Rp30.000</td>
+                <td>Goreng Sapi: Rp42.000</td>
+                <td>Nasi Bistik Ayam: Rp42.000</td>
+                <td>Air Mineral: Rp9.000</td>
+            </tr>
+        </table>   
+    </main> 
+</body>
+</html>
