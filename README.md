@@ -1,1 +1,1 @@
-Live link : https://k3nnytang.github.io/HCI_LAB2/
+Live link : https://kennytangg.github.io/HCI_LAB2/
